@@ -8,12 +8,12 @@ from kivy.core.window import Window
 class ImageButton(Button):
     def __init__(self, image_source, **kwargs):
         super().__init__(**kwargs)
-        # Usamos la imagen directamente como fondo del botón
+        # Botoncito bonito :D
         self.background_normal = image_source
         self.background_down = image_source
-        # Reducimos el tamaño para que no queden aplastados
+        # PA Q NO ESTEN APLASTADOTES
         self.size_hint = (None, None)
-        self.size = (80, 80)  # Ajuste de tamaño estático para mantener proporciones
+        self.size = (80, 80)  # NS AYUDAAAAAA
 
 class TimerScreen(BoxLayout):
     def __init__(self, switch_to_main, **kwargs):
@@ -22,7 +22,7 @@ class TimerScreen(BoxLayout):
         self.padding = 20
         self.spacing = 10
         
-        self.time = 0  # Empezar desde 0 segundos
+        self.time = 0  # q empiece desde 0
         self.label = Label(text='00:00', font_size='48sp')
         
         header = BoxLayout(orientation='horizontal', size_hint=(1, 0.1))
@@ -50,15 +50,15 @@ class MainScreen(BoxLayout):
     def __init__(self, switch_to_timer, **kwargs):
         super().__init__(**kwargs)
         self.orientation = 'vertical'
-        self.padding = 20
-        self.spacing = 50
+        self.padding = 70
+        self.spacing = 20
         
         label = Label(text='Hello, team\nTime to start', font_size='24sp', size_hint=(1, 0.2))
         self.add_widget(label)
         
         #El boxlayout pa que no se estiren los malditos
         button_layout = BoxLayout(orientation='horizontal', spacing=180, size_hint=(None, None))
-        button_layout.size = (200, 100)  # Ajuste del tamaño total del layout de los botones
+        button_layout.size = (200, 400)  # tamaño del layout d los botoncitos
         
         button_x = ImageButton(image_source='images/reject.png')
         button_check = ImageButton(image_source='images/verified.png')
